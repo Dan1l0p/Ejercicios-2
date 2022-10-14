@@ -1,0 +1,19 @@
+import math
+
+class Punto:
+    def __init__(self, x=0,y=0):
+        self.x = x
+        self.y = y
+    def __str__(self):
+        return "({}, {})".format(self.x,self.y)
+
+        if self.x > 0 and self.y > 0:
+            print("{} se encuentra en el primer cuadrante".format(self))
+        elif self.x < 0 and self.y > 0:
+            print("{} se encuentra en el segundo cuadrante".format(self))
+        elif self.x < 0 and self.y < 0:
+            print("{} se encuentra en el tercer cuadrante".format(self))
+        elif self.x > 0 and self.y < 0:
+            print("{} se encuentra en el cuarto cuadrante".format(self))
+        else:
+            print("{} se encuentra en el origen".format(self))
