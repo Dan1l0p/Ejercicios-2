@@ -17,3 +17,14 @@ class Punto:
             print("{} se encuentra en el cuarto cuadrante".format(self))
         else:
             print("{} se encuentra en el origen".format(self))
+
+def vector(self,v):
+    print("El vector entre los puntos {} y {} es ({},{})".format(self,v,v.x - self.x, v.y-self.y))
+
+A = Punto(2,3)
+B = Punto(5,5)
+C = Punto(-3,-1)
+D = Punto(0,0)
+A.cuadrante()
+B.cuadrante()
+C.cuadrante()
