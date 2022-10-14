@@ -20,6 +20,13 @@ class Punto:
 
 def vector(self,v):
     print("El vector entre los puntos {} y {} es ({},{})".format(self,v,v.x - self.x, v.y-self.y))
+def distancia (self, d):
+    distan = math.sqrt((d.x- self.x)**2+ (d.y-self.y)**2)
+    print("La distancia entre los puntos {} y {} es({})".format(self,d,distan))
+
+
+class Rectangulo:
+    
 
 A = Punto(2,3)
 B = Punto(5,5)
