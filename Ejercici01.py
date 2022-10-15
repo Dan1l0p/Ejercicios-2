@@ -18,20 +18,39 @@ class Punto:
         else:
             print("{} se encuentra en el origen".format(self))
 
-def vector(self,v):
-    print("El vector entre los puntos {} y {} es ({},{})".format(self,v,v.x - self.x, v.y-self.y))
-def distancia (self, d):
-    distan = math.sqrt((d.x- self.x)**2+ (d.y-self.y)**2)
-    print("La distancia entre los puntos {} y {} es({})".format(self,d,distan))
+    def vector(self,v):
+        print("El vector entre los puntos {} y {} es ({},{})".format(self,v,v.x - self.x, v.y-self.y))
+    def distancia (self, d):
+        distan = math.sqrt((d.x- self.x)**2+ (d.y-self.y)**2)
+        print("La distancia entre los puntos {} y {} es({})".format(self,d,distan))
 
 
 class Rectangulo:
-    
+    def __init__(self,Pi=Punto(),Pf=Punto()):
+        self.Pi = Pi
+        self.Pf = Pf
+    def base(self):
+        self.v_base = abs(self.Pf.x - self.Pi.x)
+        print("La base es {}".format(self.v_base))
+
+    def altura(self):
+        self.v_altura = abs(self.Pf.y- self.Pi.y)
+        print("La altura es {}".format(self.v_altura))
+
+
 
 A = Punto(2,3)
 B = Punto(5,5)
 C = Punto(-3,-1)
 D = Punto(0,0)
-A.cuadrante()
-B.cuadrante()
-C.cuadrante()
+A.vector(B)
+B.vector(A)
+A.distancia(B)
+B.distancia(A)
+A.distancia(D)
+A.distancia(D)
+A.distancia(D)
+Rec = Rectangulo(A, B)
+Rec.base()
+Rec.altura()
+Rec.area()
