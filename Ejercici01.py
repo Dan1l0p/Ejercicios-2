@@ -7,6 +7,8 @@ class Punto:
     def __str__(self):
         return "({}, {})".format(self.x,self.y)
 
+    def cuadrante(self):
+
         if self.x > 0 and self.y > 0:
             print("{} se encuentra en el primer cuadrante".format(self))
         elif self.x < 0 and self.y > 0:
@@ -47,14 +49,23 @@ A = Punto(2,3)
 B = Punto(5,5)
 C = Punto(-3,-1)
 D = Punto(0,0)
+
 A.vector(B)
 B.vector(A)
+
 A.distancia(B)
 B.distancia(A)
 A.distancia(D)
-A.distancia(D)
-A.distancia(D)
+B.distancia(D)
+C.distancia(D)
+
 Rec = Rectangulo(A, B)
 Rec.base()
 Rec.altura()
 Rec.area()
+
+A.cuadrante()
+B.cuadrante()
+C.cuadrante()
+D.cuadrante()
+
