@@ -3,20 +3,20 @@ def modificar(lista):
     nueva_lista = list(set(lista))
     nueva_lista.sort(reverse=True)
     
-    nueva_lista2 = nueva_lista
+    lista2 = []
     for num in lista:
-        if not num % 2 == 0:
-            nueva_lista2.pop(num)
+        if num % 2 == 0:
+            lista2.append(num)
         else:
-            nueva_lista2.append(num)
-    suma = sum(nueva_lista2)
-    nueva_lista2.insert(0,suma)
-    return nueva_lista2
+            pass
+    suma = sum(lista2)
+    lista2.insert(0,suma)
+    return lista2
     
 
 
 
-lista = [1,2,3,4,5,5,4,8,9,2,]
-nuevalista= modificar(lista)
+lista = [1,2,3,4,5,5,2,8,9,2,]
+newlista= modificar(lista)
 print(modificar(lista))
-print(nuevalista[0]== sum(nuevalista[1:]))
+print(newlista[0]== sum(newlista[1:]))
