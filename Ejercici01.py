@@ -36,7 +36,11 @@ class Rectangulo:
     def altura(self):
         self.v_altura = abs(self.Pf.y- self.Pi.y)
         print("La altura es {}".format(self.v_altura))
-
+    def area(self):
+        self.v_base = abs(self.Pf.x - self.Pi.x)
+        self.v_altura = abs(self.Pf.y - self.Pi.y)
+        self.v_area = self.v_base * self.v_altura
+        print("El area es {}".format(self.v_area))
 
 
 A = Punto(2,3)
