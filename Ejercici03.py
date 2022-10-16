@@ -1,7 +1,7 @@
 def modificar(lista):
 
-    nueva_lista = list(set(lista))
-    nueva_lista.sort(reverse=True)
+    lista = list(set(lista))
+    lista.sort(reverse=True)
     
     lista2 = []
     for num in lista:
